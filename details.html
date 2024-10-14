@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Product Details</title>
+    <link rel="stylesheet" href="css/shared.css" />
+    <link rel="stylesheet" href="css/details.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Syne:wght@400..800&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <header class="header">
+      <div class="header-banner-container">
+        <div class="header-banner-dropdown">
+          <div class="header-banner">
+            <h2>
+              Summer Sale For All Swim Suits And Free Express Delivery - OFF
+              50%!
+            </h2>
+            <a href="index.html">ShopNow</a>
+          </div>
+          <select class="header-dropdown" id="language-select">
+            <option class="header-language0" value="" disabled selected hidden>
+              English
+            </option>
+            <option class="header-language1" id="english-btn" value="english">
+              English
+            </option>
+            <option class="header-language2" id="turkish-btn" value="turkish">
+              Turkish
+            </option>
+          </select>
+        </div>
+      </div>
+      <nav class="header-nav">
+        <img
+          src="assets/images/header/Logo.svg"
+          alt="Logo"
+          class="header-logo"
+        />
+        <div class="header-logo-pages" id="myLinks">
+          <ul class="active-hamburger">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="contact.html">Contact</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="register.html">Sign Up</a></li>
+          </ul>
+        </div>
+        <a class="icon-hamburger" onclick="myFunction()">
+          <i class="fa fa-bars"></i>
+        </a>
+        <div class="header-search-cart" id="myLinks">
+          <div class="header-search-container">
+            <form class="header-search">
+              <input
+                placeholder="What are you looking for?"
+                class="search-input"
+                type="search"
+              />
+              <button class="btn-search">
+                <i class="fa-solid fa-magnifying-glass"></i>
+              </button>
+              <ul class="search-list"></ul>
+            </form>
+          </div>
+          <div class="header-wishlist-cart">
+            <a href="wishlist.html"><i class="fa-regular fa-heart"></i></a>
+            <a href="cart.html"><i class="fa-solid fa-cart-shopping"></i></a>
+            <!--[AU-16-Logout] akile - START-->
+            <div class="user-icon" onclick="userMenu()">
+              <button class="user-icon-btn">
+                <i class="fa-regular fa-user"></i>
+              </button>
+            </div>
+            <div class="user-menu">
+              <ul class="user-menu-list">
+                <li class="user-menu-element">
+                  <i class="fa-regular fa-user"></i>
+                  <a href=""> <p>Manage My Acconunt</p></a>
+                </li>
+                <li class="user-menu-element">
+                  <i class="fa-solid fa-box-archive"></i>
+                  <a href="">
+                    <p>My Order</p>
+                  </a>
+                </li>
+                <li class="user-menu-element">
+                  <i class="fa-regular fa-circle-xmark"></i>
+                  <a href=""> <p>My Cancellations</p></a>
+                </li>
+                <li class="user-menu-element">
+                  <i class="fa-solid fa-star"></i>
+                  <a href=""> <p>My Reviews</p></a>
+                </li>
+                <li class="user-menu-element">
+                  <i class="fa-solid fa-arrow-right-from-bracket"></i>
+                  <a href="#" onclick="logout()"> <p>Logout</p></a>
+                </li>
+              </ul>
+            </div>
+            <!--[AU-16-Logout] akile - END-->
+          </div>
+        </div>
+      </nav>
+    </header>
+    <div class="wrapper">
+      <div class="pdp-container">
+        <div class="breadcrumb">
+          <a href="index.html">Home</a>
+          <p>/</p>
+          <span>Havic HV G-92 Gamepad</span>
+        </div>
+        <div class="pdp-main-section">
+          <div class="pdp-imgs-container">
+            <div class="pdp-imgs-small">
+              <div
+                class="pdp-imgs-small-img selected"
+                onclick="changeMainImage(this)"
+              >
+                <img
+                  src="assets/images/details/details-main.png"
+                  alt="Product Main Image"
+                />
+              </div>
+              <div class="pdp-imgs-small-img" onclick="changeMainImage(this)">
+                <img
+                  src="assets/images/details/details-side-1.png"
+                  alt="Product Image 2"
+                />
+              </div>
+              <div class="pdp-imgs-small-img" onclick="changeMainImage(this)">
+                <img
+                  src="assets/images/details/details-side-2.png"
+                  alt="Product Image 3"
+                />
+              </div>
+              <div class="pdp-imgs-small-img" onclick="changeMainImage(this)">
+                <img
+                  src="assets/images/details/details-side-3.png"
+                  alt="Product Image 4"
+                />
+              </div>
+            </div>
+            <div class="pdp-imgs-big-img">
+              <img
+                src="assets/images/details/details-main.png"
+                alt="Product Main Image"
+              />
+            </div>
+          </div>
+          <div class="pdp-features-container">
+            <div class="pdp-info">
+              <h2>Havic HV G-92 Gamepad</h2>
+              <div class="pdp-rating-container">
+                <div class="pdp-star-rating">
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                </div>
+                <p>(150 Reviews)</p>
+                <p>|</p>
+                <span>In Stock</span>
+              </div>
+              <h3>$192.00</h3>
+              <p>
+                PlayStation 5 Controller Skin High quality vinyl with air<br />
+                channel adhesive for easy bubble free install & mess<br />
+                free removal Pressure sensitive.
+              </p>
+            </div>
+            <hr />
+            <div class="pdp-color-picker">
+              <p>Colours:</p>
+              <div class="pdp-color-picker-choices">
+                <button
+                  type="button"
+                  class="pdp-color-picker-turquoise selected-color"
+                ></button>
+                <button type="button" class="pdp-color-picker-orange"></button>
+              </div>
+            </div>
+            <div class="pdp-size">
+              <p>Size:</p>
+              <div class="pdp-size-choices">
+                <button type="button">XS</button>
+                <button type="button">S</button>
+                <button type="button">M</button>
+                <button type="button" class="selected-size">L</button>
+                <button type="button">XL</button>
+              </div>
+            </div>
+            <div class="pdp-purchase-section">
+              <div class="pdp-purchase-quantity">
+                <button type="button" onclick="decreaseQuantity()">-</button>
+                <input
+                  type="number"
+                  value="1"
+                  min="1"
+                  id="quantity"
+                  oninput="validateQuantity()"
+                />
+                <button type="button" onclick="increaseQuantity()">+</button>
+              </div>
+              <button type="button" class="pdp-cart-btn">Buy Now</button>
+              <button type="button" class="pdp-wishlist-btn">
+                <i
+                  class="fa-regular fa-heart"
+                  id="wishlist-icon"
+                  onclick="toggleState()"
+                ></i>
+              </button>
+            </div>
+            <div class="pdp-delivery-section">
+              <div class="pdp-free-delivery">
+                <i class="fa-solid fa-truck"></i>
+                <div class="pdp-free-delivery-info">
+                  <h3>Free Delivery</h3>
+                  <p>
+                    <a href="#"
+                      >Enter your postal code for Delivery Availability</a
+                    >
+                  </p>
+                </div>
+              </div>
+              <hr />
+              <div class="pdp-return-delivery">
+                <i class="fa-solid fa-recycle"></i>
+                <div class="pdp-return-delivery-info">
+                  <h3>Return Delivery</h3>
+                  <p>
+                    Free Delivery Return for 30 Days! <a href="#">Details</a>
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <footer>
+        <div class="footer-container">
+          <div class="ft-section">
+            <h3 class="ft-primary-title">Exclusive</h3>
+            <h5 class="ft-secondary-title">Subscribe</h5>
+            <p>Get 10% off your first order</p>
+            <div class="ft-input-container">
+              <input
+                class="ft-input"
+                type="email"
+                placeholder="Enter your email"
+              />
+              <button aria-label="Submit Email">
+                <i class="fa-regular fa-paper-plane"></i>
+              </button>
+            </div>
+          </div>
+          <div class="ft-section">
+            <h3 class="ft-secondary-title">Support</h3>
+            <p>
+              111 Bijoy sarani, Dhaka,<br />
+              DH 1515, Bangladesh
+            </p>
+            <p>exclusive@gmail.com</p>
+            <p>+88015-88888-9999</p>
+          </div>
+          <div class="ft-section">
+            <h3 class="ft-secondary-title">Account</h3>
+            <p><a href="account.html">My account</a></p>
+            <p><a href="login.html">Login / Register</a></p>
+            <p><a href="cart.html">Cart</a></p>
+            <p><a href="wishlist.html">Wishlist</a></p>
+            <p><a href="#">Shop</a></p>
+          </div>
+          <div class="ft-section">
+            <h3 class="ft-secondary-title">Quick Link</h3>
+            <p>Privacy Policy</p>
+            <p>Terms Of Use</p>
+            <p>FAQ</p>
+            <p><a href="contact.html">Contact</a></p>
+          </div>
+          <div class="ft-section">
+            <h3 class="ft-secondary-title">Download App</h3>
+            <div class="ft-download-section">
+              <p>Save $3 with App New User Only</p>
+              <div class="ft-primary-img-box">
+                <img src="/images/qrcode-logo.png" alt="qrcode-logo" />
+                <div class="ft-secondary-img-box">
+                  <img src="/images/app-store-logo.png" alt="app-store-logo" />
+                  <img
+                    src="/images/google-play-logo.png"
+                    alt="google-play-logo"
+                  />
+                </div>
+              </div>
+            </div>
+            <div class="ft-icon-box">
+              <i class="fa-brands fa-facebook-f"></i>
+              <i class="fa-brands fa-twitter"></i>
+              <i class="fa-brands fa-instagram"></i>
+              <i class="fa-brands fa-linkedin-in"></i>
+            </div>
+          </div>
+        </div>
+        <hr />
+        <div class="copyright-section">
+          <i class="fa-regular fa-copyright"></i>
+          <p>Copyright Rimel <span id="year"></span>. All right reserved</p>
+        </div>
+      </footer>
+      <script src="js/shared.js"></script>
+      <script src="js/details.js"></script>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,596 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>E-Commerce Homepage</title>
+    <link rel="stylesheet" href="css/shared.css" />
+    <link rel="stylesheet" href="css/index.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,600&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,600&family=Poppins:wght@100;500&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Syne:wght@400..800&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  </head>
+  <body>
+    <!--[AU-1-Homepage-Header] fatih - START-->
+    <header class="header">
+      <div class="header-banner-container">
+        <div class="header-banner-dropdown">
+          <div class="header-banner">
+            <h2>
+              Summer Sale For All Swim Suits And Free Express Delivery - OFF
+              50%!
+            </h2>
+            <a href="index.html">ShopNow</a>
+          </div>
+          <select class="header-dropdown" id="language-select">
+            <option class="header-language0" value="" disabled selected hidden>
+              English
+            </option>
+            <option class="header-language1" id="english-btn" value="english">
+              English
+            </option>
+            <option class="header-language2" id="turkish-btn" value="turkish">
+              Turkish
+            </option>
+          </select>
+        </div>
+      </div>
+      <nav class="header-nav">
+        <a href="index.html">
+          <img
+            src="assets/images/header/Logo.svg"
+            alt="Logo"
+            class="header-logo"
+          />
+        </a>
+        <div class="header-logo-pages" id="myLinks">
+          <ul class="active-hamburger">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="contact.html">Contact</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="register.html">Sign Up</a></li>
+          </ul>
+        </div>
+        <a class="icon-hamburger" onclick="myFunction()">
+          <i class="fa fa-bars"></i>
+        </a>
+        <div class="header-search-cart" id="myLinks">
+          <div class="header-search-container">
+            <form class="header-search">
+              <input
+                placeholder="What are you looking for?"
+                class="search-input"
+                type="search"
+              />
+              <button class="btn-search">
+                <i class="fa-solid fa-magnifying-glass"></i>
+              </button>
+              <ul class="search-list"></ul>
+            </form>
+          </div>
+          <div class="header-wishlist-cart">
+            <a href="wishlist.html"><i class="fa-regular fa-heart"></i></a>
+            <a href="cart.html"><i class="fa-solid fa-cart-shopping"></i></a>
+            <!--[AU-16-Logout] akile - START-->
+            <div class="user-icon" onclick="userMenu()">
+              <button class="user-icon-btn">
+                <i class="fa-regular fa-user"></i>
+              </button>
+            </div>
+            <div class="user-menu">
+              <ul class="user-menu-list">
+                <li class="user-menu-element">
+                  <i class="fa-regular fa-user"></i>
+                  <a href=""> <p>Manage My Acconunt</p></a>
+                </li>
+                <li class="user-menu-element">
+                  <i class="fa-solid fa-box-archive"></i>
+                  <a href="">
+                    <p>My Order</p>
+                  </a>
+                </li>
+                <li class="user-menu-element">
+                  <i class="fa-regular fa-circle-xmark"></i>
+                  <a href=""> <p>My Cancellations</p></a>
+                </li>
+                <li class="user-menu-element">
+                  <i class="fa-solid fa-star"></i>
+                  <a href=""> <p>My Reviews</p></a>
+                </li>
+                <li class="user-menu-element">
+                  <i class="fa-solid fa-arrow-right-from-bracket"></i>
+                  <a href="#" onclick="logout()"> <p>Logout</p></a>
+                </li>
+              </ul>
+            </div>
+            <!--[AU-16-Logout] akile - END-->
+          </div>
+        </div>
+      </nav>
+      <div class="line-div1"></div>
+      <section class="aside-nav">
+        <div class="header-aside">
+          <ul class="aside-category">
+            <li class="cat-dropdown">
+              <div class="up-cat">
+                <a class="fashion" href="#">Woman's Fashion</a>
+                <i class="fa-solid fa-angle-right"></i>
+              </div>
+              <ul class="sub-cat">
+                <li><a href="#">Dresses</a></li>
+                <li><a href="#">Skirts</a></li>
+              </ul>
+            </li>
+            <li class="cat-dropdown">
+              <div class="up-cat">
+                <a class="fashion" href="#">Men's Fashion</a>
+                <i class="fa-solid fa-angle-right"></i>
+              </div>
+              <ul class="sub-cat">
+                <li><a href="#">Casual</a></li>
+                <li><a href="#">Jeans</a></li>
+              </ul>
+            </li>
+            <li><a href="#">Electronics</a></li>
+            <li><a href="#">Home & Lifestyle</a></li>
+            <li><a href="#">Medicine</a></li>
+            <li><a href="#">Sports & Outdoor</a></li>
+            <li><a href="#">Baby's & Toys</a></li>
+            <li><a href="#">Groceries & Pets</a></li>
+            <li><a href="#">Health & Beauty</a></li>
+          </ul>
+        </div>
+        <div class="line-div2"></div>
+        <div class="slide-container">
+          <div class="slide-text">
+            <div class="icon-text">
+              <div class="apple-icon">
+                <img
+                  src="assets/images/header/apple-logo.png"
+                  alt="Apple Logo"
+                />
+                <p>iPhone 14 Series</p>
+              </div>
+              <p class="card-text">Up to 10% off Voucher</p>
+              <button class="shop-now">
+                Shop Now <i class="fa-solid fa-arrow-right-long"></i>
+              </button>
+            </div>
+            <div class="slider">
+              <div class="slides">
+                <div class="slide">
+                  <div class="slides-text"></div>
+                  <img src="/assets/images/header/slide-1.png" alt="Image 1" />
+                </div>
+                <div class="slide">
+                  <img src="/assets/images/header/slide-2.png" alt="Image 2" />
+                </div>
+                <div class="slide">
+                  <img src="assets/images/header/slide-3.png" alt="Image 3" />
+                </div>
+                <div class="slide">
+                  <img src="/assets/images/header/slide-4.png" alt="Image 4" />
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="dots">
+            <span class="dot"></span>
+            <span class="dot"></span>
+            <span class="dot"></span>
+          </div>
+        </div>
+      </section>
+    </header>
+    <!--[AU-1-Homepage-Header] fatih - END-->
+    <!--[Today's-Products] AkileNisa - START-->
+    <section class="today_container">
+      <div class="header_bar">
+        <div class="top-bar">
+          <div class="today-countdown">
+            <div class="today_sale">
+              <h1 class="today_header">
+                <span class="red-line"></span>Today's
+              </h1>
+              <span class="flash-sale">Flash Sales</span>
+            </div>
+            <div id="countdown" class="countdown">
+              <div class="countdown-item">
+                <p class="countdown-title-time">Days</p>
+                <span id="days" class="days">00</span>
+              </div>
+              <div class="countdown-item">
+                <p class="countdown-title-time">Hours</p>
+                <span id="hours" class="hours">00</span>
+              </div>
+              <div class="countdown-item">
+                <p class="countdown-title-time">Minutes</p>
+                <span id="minutes" class="minutes">00</span>
+              </div>
+              <div class="countdown-item">
+                <p class="countdown-title-time">Seconds</p>
+                <span id="seconds" class="seconds">00</span>
+              </div>
+            </div>
+          </div>
+          <div class="arrows">
+            <button id="left-arrow">
+              <i class="fa-solid fa-arrow-left-long"></i>
+            </button>
+            <button id="right-arrow">
+              <i class="fa-solid fa-arrow-right-long"></i>
+            </button>
+          </div>
+        </div>
+      </div>
+      <div class="product-view">
+        <div id="product-list" class="product-list"></div>
+        <div class="view-all">
+          <button id="view-all-products" class="view-all-products">
+            View All Products
+          </button>
+        </div>
+      </div>
+    </section>
+    <!--[Today's-Products] AkileNisa - END-->
+    <!--[AU-03] AkileNisa -STAR-->
+    <section class="homepage-category-container">
+      <div class="homepage-category-header">
+        <div class="homepage-category-titles">
+          <div class="homepage-category-subtitles">
+            <span class="homepage-category-red-line"></span>
+            <h3 class="homepage-category-subtitle">Categories</h3>
+          </div>
+          <h2 class="homepage-category-title">Browse By Category</h2>
+        </div>
+        <div class="homepage-category-btns">
+          <button class="homepage-category-btn-prev">
+            <i class="fa-solid fa-arrow-left"></i>
+          </button>
+          <button class="homepage-category-btn-next">
+            <i class="fa-solid fa-arrow-right"></i>
+          </button>
+        </div>
+      </div>
+      <div class="homepage-categorys">
+        <div class="homepage-categoriy-card">
+          <i class="fas fa-laptop"></i>
+          <p class="homepage-categoriy-card-name">Laptop</p>
+        </div>
+        <div class="homepage-categoriy-card">
+          <i class="fas fa-mobile-alt"></i>
+          <p class="homepage-categoriy-card-name">Mobile</p>
+        </div>
+        <div class="homepage-categoriy-card">
+          <i class="fas fa-camera"></i>
+          <p class="homepage-categoriy-card-name">Camera</p>
+        </div>
+        <div class="homepage-categoriy-card">
+          <i class="fas fa-headphones"></i>
+          <p class="homepage-categoriy-card-name">Headphones</p>
+        </div>
+        <div class="homepage-categoriy-card">
+          <i class="fas fa-gamepad"></i>
+          <p class="homepage-categoriy-card-name">Gamepad</p>
+        </div>
+        <div class="homepage-categoriy-card">
+          <i class="fa-solid fa-shirt"></i>
+          <p class="homepage-categoriy-card-name">Clothes</p>
+        </div>
+        <div class="homepage-categoriy-card">
+          <i class="fas fa-tv"></i>
+          <p class="homepage-categoriy-card-name">TV</p>
+        </div>
+        <div class="homepage-categoriy-card">
+          <i class="fas fa-mouse"></i>
+          <p class="homepage-categoriy-card-name">Mouse</p>
+        </div>
+      </div>
+    </section>
+    <!--[AU-03] AkileNisa - END-->
+    <!-- [AU-4] - Furkan/Homepage Best Selling Products Section Start -->
+    <div class="homepage-best-selling-products">
+      <div class="homepage-best-selling-products-head">
+        <div class="upper-header">
+          <div class="orange-box"></div>
+          <h3 class="homepage-best-selling-products-h3">This Month</h3>
+        </div>
+        <div class="lower-header">
+          <h2 class="homepage-best-selling-products-h2">
+            Best Selling Products
+          </h2>
+          <button
+            class="homepage-best-selling-products-btn"
+            id="best-selling-products-btn"
+            onclick="toggleProductsView()"
+          >
+            View All
+          </button>
+        </div>
+      </div>
+      <div
+        class="homepage-best-selling-products-container"
+        id="best-selling-products-api"
+      ></div>
+    </div>
+    <!-- [AU-4] - Furkan/Homepage Best Selling Products Section End -->
+    <!--[AU-5-Homepage Featured Product] fatih - START-->
+
+    <div class="homepage-featured-product">
+      <div class="homepage-featured-product-head">
+        <p class="homepage-featured-product-p">Categories</p>
+        <h3 class="homepage-featured-product-h3">
+          Enhance Your Music Experience
+        </h3>
+        <div id="countdown-featured" class="countdown-featured">
+          <div class="countdown-featured-item">
+            <span id="countdown-featured-days" class="countdown-featured-days"
+              >00</span
+            >
+            <p class="countdown-featured-title-time">Days</p>
+          </div>
+          <div class="countdown-featured-item">
+            <span id="countdown-featured-hours" class="countdown-featured-hours"
+              >00</span
+            >
+            <p class="countdown-featured-title-time">Hours</p>
+          </div>
+          <div class="countdown-featured-item">
+            <span
+              id="countdown-featured-minutes"
+              class="countdown-featured-minutes"
+              >00</span
+            >
+            <p class="countdown-featured-title-time">Minutes</p>
+          </div>
+          <div class="countdown-featured-item">
+            <span
+              id="countdown-featured-seconds"
+              class="countdown-featured-seconds"
+              >00</span
+            >
+            <p class="countdown-featured-title-time">Seconds</p>
+          </div>
+        </div>
+        <button class="homepage-featured-product-btn">
+          <a href="/cart.html"> Buy Now! </a>
+        </button>
+      </div>
+      <div class="featured-opacity">
+        <img
+          class="featured-opacity"
+          src="assets/images/featured/eclipse.png"
+          alt=""
+        />
+      </div>
+      <div class="homepage-featured-product-img">
+        <img
+          src="assets/images/featured/JBL_BOOMBOX_2_HERO_020_x1.png"
+          alt="featured"
+        />
+      </div>
+    </div>
+
+    <!--[AU-5-Homepage Featured Product] fatih - END-->
+    <!-- [AU-6] - esra/AU-6-Homepage-Explore-Products Start -->
+
+    <section class="homepage-explore-products">
+      <div class="he-our-products">
+        <div class="our-products">
+          <div class="upper-header">
+            <div class="orange-box"></div>
+            <h3 class="homepage-best-selling-products-h3">Our Products</h3>
+          </div>
+        </div>
+        <div class="he-explore-products">
+          <h2>Explore Our Products</h2>
+          <div class="he-explore-products-arrows">
+            <button id="he-left-arrow">
+              <i class="fa-solid fa-arrow-left-long"></i>
+            </button>
+            <button id="he-right-arrow">
+              <i class="fa-solid fa-arrow-right-long"></i>
+            </button>
+          </div>
+        </div>
+        <div class="our-products-details">
+          <div
+            class="homepage-our-products-details"
+            id="homepage-our-products-details"
+          ></div>
+          <div class="he-our-products-all-button">
+            <button id="he-view-all-products" class="he-view-all-products">
+              View All Products
+            </button>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- [AU-6] - esra/AU-6-Homepage-Explore-Products End -->
+
+    <!-- [AU-7] - oguz/AU-7-Homepage-New-Arrivals Start -->
+    <div class="homepage-new-arrivals">
+      <div class="homepage-new-arrivals-head">
+        <div class="homepage-new-arrivals-upper-header">
+          <div class="orange-box"></div>
+          <h3 class="homepage-new-arrivals-featured-h3">Featured</h3>
+        </div>
+        <div class="homepage-new-arrivals-lower-header">
+          <h2 class="homepage-new-arrivals-new-arrival-h2">New Arrival</h2>
+        </div>
+      </div>
+
+      <div class="homepage-new-arrivals-img">
+        <div class="black large-card">
+          <img src="images/playstation.png" alt="playstation" />
+          <span class="card-text-content">
+            <h4>PlayStation 5</h4>
+            <p>Black and White version of the PS5 coming out on sale.</p>
+            <a href="/">Shop Now</a>
+          </span>
+        </div>
+        <div class="right-cards-wrapper">
+          <div class="black top-card">
+            <img src="images/women.png" alt="women" />
+            <span class="card-text-content">
+              <h4>Women's Collections</h4>
+              <p>Featured woman collections that give you another vibe.</p>
+              <a href="/">Shop Now</a>
+            </span>
+          </div>
+          <div class="bottom-card-wrapper">
+            <div class="black bottom-card">
+              <img src="images/speaker.png" alt="speaker" />
+              <span class="card-text-content">
+                <h4>Speakers</h4>
+                <p>Amazon wireless speakers</p>
+                <a href="/">Shop Now</a>
+              </span>
+            </div>
+            <div class="black bottom-card">
+              <img src="images/parfume.png" alt="parfume" />
+              <span class="card-text-content">
+                <h4>Perfume</h4>
+                <p>GUCCI INTENSE OUD EDP</p>
+                <a href="/">Shop Now</a>
+              </span>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="homepage-new-arrivals-flex-container">
+        <div class="homepage-new-arrivals-group">
+          <img
+            class="homepage-new-arrivals-group-img"
+            src="images/delivery.png"
+            alt="group"
+          />
+          <p class="homepage-new-arrivals-part-title">FREE AND FAST DELIVERY</p>
+          <p class="homepage-new-arrivals-part-content">
+            Free delivery for all orders over $140
+          </p>
+        </div>
+        <div class="homepage-new-arrivals-group">
+          <img
+            class="homepage-new-arrivals-group-img"
+            src="images/customer.png"
+            alt="group"
+          />
+          <p class="homepage-new-arrivals-part-title">24/7 CUSTOMER SERVICE</p>
+          <p class="homepage-new-arrivals-part-content">
+            Friendly 24/7 customer support
+          </p>
+        </div>
+        <div class="homepage-new-arrivals-group">
+          <img
+            class="homepage-new-arrivals-group-img"
+            src="images/secure.png"
+            alt="group"
+          />
+          <p class="homepage-new-arrivals-part-title">MONEY BACK GUARANTEE</p>
+          <p class="homepage-new-arrivals-part-content">
+            We reurn money within 30 days
+          </p>
+        </div>
+      </div>
+    </div>
+    <!-- [AU-7] - oguz/AU-7-Homepage-New-Arrivals End -->
+    <!-- [AU-8] - Furkan/Footer Section Start -->
+    <footer>
+      <div class="footer-container">
+        <div class="ft-section">
+          <h3 class="ft-primary-title">Exclusive</h3>
+          <h5 class="ft-secondary-title">Subscribe</h5>
+          <p>Get 10% off your first order</p>
+          <div class="ft-input-container">
+            <input
+              class="ft-input"
+              type="email"
+              placeholder="Enter your email"
+            />
+            <button aria-label="Submit Email">
+              <i class="fa-regular fa-paper-plane"></i>
+            </button>
+          </div>
+        </div>
+        <div class="ft-section">
+          <h3 class="ft-secondary-title">Support</h3>
+          <p>
+            111 Bijoy sarani, Dhaka,<br />
+            DH 1515, Bangladesh
+          </p>
+          <p>exclusive@gmail.com</p>
+          <p>+88015-88888-9999</p>
+        </div>
+        <div class="ft-section">
+          <h3 class="ft-secondary-title">Account</h3>
+          <p><a href="account.html">My account</a></p>
+          <p><a href="login.html">Login / Register</a></p>
+          <p><a href="cart.html">Cart</a></p>
+          <p><a href="wishlist.html">Wishlist</a></p>
+          <p><a href="#">Shop</a></p>
+        </div>
+        <div class="ft-section">
+          <h3 class="ft-secondary-title">Quick Link</h3>
+          <p>Privacy Policy</p>
+          <p>Terms Of Use</p>
+          <p>FAQ</p>
+          <p><a href="contact.html">Contact</a></p>
+        </div>
+        <div class="ft-section">
+          <h3 class="ft-secondary-title">Download App</h3>
+          <div class="ft-download-section">
+            <p>Save $3 with App New User Only</p>
+            <div class="ft-primary-img-box">
+              <img src="/images/qrcode-logo.png" alt="qrcode-logo" />
+              <div class="ft-secondary-img-box">
+                <img src="/images/app-store-logo.png" alt="app-store-logo" />
+                <img
+                  src="/images/google-play-logo.png"
+                  alt="google-play-logo"
+                />
+              </div>
+            </div>
+          </div>
+          <div class="ft-icon-box">
+            <i class="fa-brands fa-facebook-f"></i>
+            <i class="fa-brands fa-twitter"></i>
+            <i class="fa-brands fa-instagram"></i>
+            <i class="fa-brands fa-linkedin-in"></i>
+          </div>
+        </div>
+      </div>
+      <hr />
+      <div class="copyright-section">
+        <i class="fa-regular fa-copyright"></i>
+        <p>Copyright Rimel <span id="year"></span>. All right reserved</p>
+      </div>
+    </footer>
+    <!-- [AU-8] - Furkan/Footer Section End -->
+    <script src="js/index.js"></script>
+    <script src="js/logout.js"></script>
+  </body>
+</html>

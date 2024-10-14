@@ -1,0 +1,197 @@
+.login-register-page-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 50px 150px 50px 0;
+    gap: 50px;
+}
+
+.login-register-page-img img {
+    width: 100%;
+}
+
+.login-register-page-form-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 30px;
+}
+
+.login-register-page-form-header {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.login-register-page-form-header h2 {
+    font-family: "Inter", sans-serif;
+    font-size: clamp(28px, 8vw, 36px);
+    line-height: clamp(22px, 8vw, 30px);
+    font-weight: 500;
+    color: #000000;
+    letter-spacing: 2px;
+    line-height: 40px;
+}
+
+.login-register-page-form-header h5 {
+    font-family: "Poppins", sans-serif;
+    font-size: clamp(10px, 4vw, 16px);
+    line-height: clamp(16px, 6vw, 24px);
+    font-weight: 400;
+    color: #000000;
+}
+
+.login-register-page-form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.login-register-input {
+    font-family: "Poppins", sans-serif;
+    font-size: clamp(10px, 4vw, 16px);
+    line-height: clamp(16px, 6vw, 24px);
+    font-weight: 400;
+    color: #000000;
+    width: 100%;
+    flex-grow: 1;
+    padding: 10px 20px;
+    border: none;
+    border-bottom: 1px solid #cccccc;
+    outline: none;
+}
+
+.login-register-input::placeholder {
+    opacity: 40%;
+}
+
+.login-register-page-btn-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 40px;
+    flex-wrap: wrap;
+}
+
+.login-register-btn {
+    font-family: "Poppins", sans-serif;
+    font-size: clamp(10px, 4vw, 16px);
+    line-height: clamp(16px, 6vw, 24px);
+    font-weight: 500;
+    color: #fafafa;
+    padding: 16px 48px;
+    background-color: #db4444;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.login-register-btn:hover {
+    background-color: #b03608;
+}
+
+.login-register-link {
+    font-family: "Poppins", sans-serif;
+    font-size: clamp(10px, 4vw, 16px);
+    line-height: clamp(16px, 6vw, 24px);
+    font-weight: 400;
+    color: #db4444;
+}
+
+.login-register-link:hover {
+    color: #b03608;
+}
+
+.login-page-register-section {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+
+.login-page-register-section h4 {
+    font-family: "Poppins", sans-serif;
+    font-size: clamp(10px, 4vw, 16px);
+    line-height: clamp(16px, 6vw, 24px);
+    font-weight: 400;
+    color: #000000;
+}
+
+.register-btn {
+    font-family: "Poppins", sans-serif;
+    font-size: clamp(10px, 4vw, 16px);
+    line-height: clamp(16px, 6vw, 24px);
+    font-weight: 400;
+    color: #db4444;
+}
+
+.register-btn:hover {
+    color: #b03608;
+}
+
+.register-page-delete-section {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    padding: 10px 0;
+}
+
+.register-delete-btn {
+    font-family: "Poppins", sans-serif;
+    font-size: clamp(10px, 4vw, 16px);
+    line-height: clamp(16px, 6vw, 24px);
+    font-weight: 400;
+    color: #db4444;
+    cursor: pointer;
+}
+
+.register-delete-btn:hover {
+    color: #b03608;
+}
+
+.register-page-confirm-delete {
+    visibility: hidden;
+    opacity: 0;
+    max-height: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 14px;
+    overflow: hidden;
+}
+
+.register-page-confirm-delete.show {
+    visibility: visible;
+    opacity: 1;
+    max-height: 100px;
+    transition: max-height 0.6s ease-in-out, opacity 0.8s ease-in-out;
+    -webkit-transition: max-height 0.6s ease-in-out, opacity 0.8s ease-in-out;
+}
+
+@media screen and (max-width: 600px) {
+    .login-register-page-container {
+        justify-content: center;
+        flex-wrap: wrap;
+        padding: 10px;
+        gap: 20px;
+    }
+    .login-register-page-img {
+        display: none;
+    }
+    .login-register-page-form-container {
+        gap: 20px;
+        padding-top: 50px;
+    }
+    .login-register-page-form-header {
+        align-items: center;
+    }
+    .login-register-page-btn-container {
+        gap: 20px;
+    }
+}
+  
